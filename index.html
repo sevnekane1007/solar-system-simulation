@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>太阳系小行星轨道动态图</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script defer src="./src/app.js"></script>
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="scene" aria-label="太阳系小行星轨道动态图"></canvas>
+
+      <section class="panel panel-left" aria-label="控制面板">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <div>
+            <h1>Solar Minor Bodies</h1>
+            <p>JPL SBDB orbital elements</p>
+          </div>
+        </div>
+
+        <div class="status" id="status">正在初始化本地轨道数据...</div>
+
+        <div class="control-block">
+          <label for="speed">时间加速</label>
+          <div class="range-row">
+            <input id="speed" type="range" min="1" max="5000" value="520" step="1" />
+            <output id="speedValue">520x</output>
+          </div>
+        </div>
+
+        <div class="control-block">
+          <label for="count">小行星数量</label>
+          <div class="range-row">
+            <input id="count" type="range" min="1000" max="30000" value="18000" step="1000" />
+            <output id="countValue">18,000</output>
+          </div>
+        </div>
+
+        <div class="control-block">
+          <label for="trailCount">轨迹线数量</label>
+          <div class="range-row">
+            <input id="trailCount" type="range" min="250" max="8000" value="2400" step="250" />
+            <output id="trailValue">2,400</output>
+          </div>
+        </div>
+
+        <div class="segmented" aria-label="小行星分类筛选">
+          <button class="active" data-filter="all">全部</button>
+          <button data-filter="main-belt">主带</button>
+          <button data-filter="near-earth">近地</button>
+          <button data-filter="pha">PHA</button>
+          <button data-filter="trojan">特洛伊</button>
+        </div>
+
+        <div class="toggles">
+          <label><input id="toggleTrails" type="checkbox" checked /> 轨迹线</label>
+          <label><input id="togglePlanets" type="checkbox" checked /> 八大行星</label>
+          <label><input id="toggleBloom" type="checkbox" checked /> 科幻辉光</label>
+        </div>
+      </section>
+
+      <section class="panel panel-right" aria-label="实时数据">
+        <div class="metric">
+          <span>已载入</span>
+          <strong id="loadedMetric">0</strong>
+        </div>
+        <div class="metric">
+          <span>可见</span>
+          <strong id="visibleMetric">0</strong>
+        </div>
+        <div class="metric">
+          <span>模拟日期</span>
+          <strong id="dateMetric">--</strong>
+        </div>
+        <div class="legend">
+          <span><i class="dot belt"></i>主带</span>
+          <span><i class="dot neo"></i>近地</span>
+          <span><i class="dot pha"></i>潜在威胁</span>
+          <span><i class="dot trojan"></i>特洛伊</span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

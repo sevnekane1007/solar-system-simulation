@@ -1,0 +1,12 @@
+# 本机专用启动脚本和快捷方式（含个人路径），不公开
+open-solar-system.url
+start-server.cmd
+start-server.ps1
+
+# 系统与编辑器文件
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+node_modules/
+.env
