@@ -4,6 +4,10 @@
 
 A dependency-free, browser-based simulation of minor-body orbits in the solar system, driven by orbital elements.
 
+![Solar System Simulation](docs/screenshot.png)
+
+**在线演示 / Live demo:** <https://sevnekane1007.github.io/solar-system-simulation/>
+
 ## 功能
 
 - 最多 30,000 颗小行星同时运行，数量可调（1,000–30,000）
@@ -21,7 +25,6 @@ python -m http.server 4173
 ```
 
 然后访问 <http://127.0.0.1:4173>。
-[![Uploading image.png…]()](https://github.com/sevnekane1007/solar-system-simulation/blob/main/Screenshot%202026-11-15%20092344.png)
 
 ## 数据来源
 
