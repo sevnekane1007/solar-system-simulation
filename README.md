@@ -21,7 +21,7 @@ python -m http.server 4173
 ```
 
 然后访问 <http://127.0.0.1:4173>。
-![Uploading image.png…]()
+[![Uploading image.png…]()](https://github.com/sevnekane1007/solar-system-simulation/blob/main/Screenshot%202026-11-15%20092344.png)
 
 ## 数据来源
 
